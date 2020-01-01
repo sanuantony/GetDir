@@ -51,7 +51,10 @@ namespace CopyAllSoapDlls
                 File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", dll), Path.Combine(@"C:\NEXTGEN", dll), true);
             File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), true);
             File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Solaire.TemplateUserControls.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.TemplateUserControls.dll"), true);
+            Console.BackgroundColor = ConsoleColor.Green;            
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Done...............");
+            Console.ReadKey();
         }
     }
 }

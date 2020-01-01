@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{66A8785A-2CB1-45FB-ADE5-CFC6CC8E3562}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <RootNamespace>CopyAllSoapDlls</RootNamespace>
     <AssemblyName>CopyAllSoapDlls</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
