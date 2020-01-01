@@ -33,26 +33,34 @@ namespace CopyAllSoapDlls
                 "NextGen.Solaire.Services.Kbm.Functions.Interfaces.dll",
                 "NextGen.Solaire.Services.Kbm.Interfaces.dll"
             };
-            string l = DateTime.Now.ToString(" yyyy-MM-dd-HH-mm-ss-fff");
-            string backupPath = @"D:\Dlls\" + l;
-            Directory.CreateDirectory(backupPath);
+            try
+            {
+                string l = DateTime.Now.ToString(" yyyy-MM-dd-HH-mm-ss-fff");
+                string backupPath = @"D:\Dlls\" + l;
+                Directory.CreateDirectory(backupPath);
 
-            //Taking Backup of existing files
-            foreach (var dll in dlls)
-                File.Copy(Path.Combine(@"C:\NEXTGEN", dll), Path.Combine(backupPath, dll), true);
-            File.Copy(Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(backupPath, "NextGen.Kbm.Fts_Soap.dll"), true);
-            File.Copy(Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.TemplateUserControls.dll"), Path.Combine(backupPath, "NextGen.Solaire.TemplateUserControls.dll"), true);
+                //Taking Backup of existing files
+                foreach (var dll in dlls)
+                    File.Copy(Path.Combine(@"C:\NEXTGEN", dll), Path.Combine(backupPath, dll), true);
+                File.Copy(Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(backupPath, "NextGen.Kbm.Fts_Soap.dll"), true);
+                File.Copy(Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.TemplateUserControls.dll"), Path.Combine(backupPath, "NextGen.Solaire.TemplateUserControls.dll"), true);
 
-            //Copying the new files
-            foreach (var dll in dlls)
-                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", dll), Path.Combine(@"C:\NEXTGEN", dll), true);
-            File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), true);
-            File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Solaire.TemplateUserControls.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.TemplateUserControls.dll"), true);
-            Console.BackgroundColor = ConsoleColor.Green;
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Clear();
-            Console.WriteLine("Done...............");
-            Console.ReadKey();
+                //Copying the new files
+                foreach (var dll in dlls)
+                    File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", dll), Path.Combine(@"C:\NEXTGEN", dll), true);
+                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), true);
+                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\src\NextGen.Kbm.FtsSoap\bin", "NextGen.Solaire.TemplateUserControls.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.TemplateUserControls.dll"), true);
+                Console.BackgroundColor = ConsoleColor.Green;
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Clear();
+                Console.WriteLine("Done...............");
+            }
+            catch (Exception e)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkRed;
+                throw e;
+            }
+            System.Threading.Tasks.Task.Delay(1000);
         }
     }
 }
