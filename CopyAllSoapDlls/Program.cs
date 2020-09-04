@@ -55,12 +55,12 @@ namespace CopyAllSoapDlls
                 foreach (var dll in dlls)
                     if (!dll.Equals("NextGen.Solaire.Host.EHR.dll"))
                         File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", dll), Path.Combine(@"C:\NEXTGEN", dll), true);
-                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", "NextGen.Solaire.Host.EHRd.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.Host.EHR.dll"), true);
+                //File.Copy(Path.Combine(@"D:\BananaCore\nextgen.solaire\bin", "NextGen.Solaire.Host.EHRd.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Solaire.Host.EHR.dll"), true);
 
                 File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Kbm.Fts_Soap.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Soap.dll"), true);
-                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Ace.Ui.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Ace.Ui.dll"), true);
+                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.ace.ui\bin", "NextGen.Ace.Ui.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Ace.Ui.dll"), true);
                 File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Ace.Cards.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Ace.Cards.dll"), true);
-                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Ace.Audit.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Ace.Audit.dll"), true);
+                File.Copy(Path.Combine(@"D:\BananaCore\nextgen.ace.audit\bin", "NextGen.Ace.Audit.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Ace.Audit.dll"), true);
                 File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Kbm.Fts_Intake.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Fts_Intake.dll"), true);
                 File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Kbm.Well_Child_Soap.dll"), Path.Combine(@"C:\NEXTGEN", "NextGen.Kbm.Well_Child_Soap.dll"), true);
 
