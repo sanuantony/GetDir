@@ -185,6 +185,15 @@ namespace CopyAllSoapDlls
                     Console.WriteLine("Unable to copy Audit");
                 }
 
+                if (File.Exists(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Ace.Templates.dll")))
+                {
+                    File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Ace.Templates.dll"), Path.Combine(@"D:\NEXTGEN", "NextGen.Ace.Templates.dll"), true);
+                }
+                else
+                {
+                    Console.WriteLine("Unable to copy NextGen.Ace.Templates");
+                }
+
                 if (File.Exists(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Kbm.Fts_Intake.dll")))
                 {
                     File.Copy(Path.Combine(@"D:\BananaCore\nextgen.templates\bin", "NextGen.Kbm.Fts_Intake.dll"), Path.Combine(@"D:\NEXTGEN", "NextGen.Kbm.Fts_Intake.dll"), true);
